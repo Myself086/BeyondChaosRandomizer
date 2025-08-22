@@ -929,12 +929,12 @@ def generate_character_palette(skintones_unused=None, char_hues_unused=None, tra
         return dynamic
 
     if not trance:
-        skintone = skintones_unused.pop(0)
+        skintone = random.choice(skintones_unused)
         skin_hue = guess_hue(list(skintone[0]))
-        hair_hue = char_hues_unused.pop(0)
-        cloth_hue_deg = nudge_apart(hue_deg(char_hues_unused.pop(0)), skin_hue)
+        hair_hue = random.choice(char_hues_unused)
+        cloth_hue_deg = nudge_apart(hue_deg(random.choice(char_hues_unused)), skin_hue)
         cloth_hue = hue_rgb(cloth_hue_deg)
-        acc_hue = hue_rgb(nudge_apart(hue_deg(char_hues_unused.pop(0)), skin_hue))
+        acc_hue = hue_rgb(nudge_apart(hue_deg(random.choice(char_hues_unused)), skin_hue))
 
         new_palette = [[0, 0, 0], [3, 3, 3]] + list(skintone)
         new_palette = list(map(components_to_color, new_palette)) * 3

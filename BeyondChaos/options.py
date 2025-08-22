@@ -1586,6 +1586,17 @@ NORMAL_FLAGS = [
          children={}
          ),
 
+    # WIP codes
+    Flag(name='hdmapalette',
+         description='HDMA PALETTE',
+         long_description='Allows using custom character sprite palettes',
+         category='experimental',
+         input_type='boolean',
+         conflicts=[],
+         requirements=[],
+         children={}
+         ),
+
 ]
 
 # these are all sprite related codes
