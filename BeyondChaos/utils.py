@@ -439,6 +439,17 @@ def int2bytes(value, length=2, reverse=True):
     return bytes(bs[:length])
 
 
+def int2bytes_array(array: list, length=2):
+    data = []
+    ranged = range(length)
+    for value in array:
+        for x in ranged:
+            data.append(value & 0xff)
+            value >>= 8
+
+    return bytes(data)
+
+
 def read_multi(infile_rom_buffer: BytesIO, length=2, reverse=True):
     vals = list(infile_rom_buffer.read(length))
     if reverse:
