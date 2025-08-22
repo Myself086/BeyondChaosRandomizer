@@ -444,9 +444,9 @@ ANCIENT_CAVE_PROHIBITED_FLAGS = {
     "strangejourney",
     "worringtriad",
     "thescenarionottaken",
-    'regionofdoom'
+    'regionofdoom',
     'morefanatical',
-    'lessfanatical'
+    'lessfanatical',
 }
 
 ALL_MODES = [
